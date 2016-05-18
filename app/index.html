@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>OLYMP TRADE - Брокер бинарных опционов</title>
     <!-- Styles -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="styles/vendor.css" rel="stylesheet" media="all">
     <link href="styles/app.css" rel="stylesheet" media="all">
     <!-- Javascript -->
@@ -13,6 +14,754 @@
     <script src="scripts/app.js"></script>
 </head>
 <body>
-    <h1>TEST</h1>
+    <div id="modal" class="white-popup-block mfp-hide">
+        <h2>ОТКРОЙТЕ СЧЕТ ПРЯМО СЕЙЧАС <span>СТАНЬТЕ УСПЕШНЫМ ТРЕЙДЕРОМ</span></h2>
+        <form action="modalform.php" method='post' class="m_lead-form form">
+            <div class="row">
+                <div class="form-label form-label-inputs">
+                    <label class="input-icon-name">
+                        <input type="text" placeholder="Ваше имя" name="modal-name" class="form-input" required="required">
+                    </label>
+                </div>
+                <div class="form-label form-label-inputs">
+                    <label class="input-icon-tel">
+                        <input type="tel" placeholder="Телефон" name="modal-tel" class="form-input" required="required">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-label form-label-inputs">
+                    <label class="input-icon-email">
+                        <input type="email" placeholder="Введите e-mail" name="modal-email" class="form-input" required="required">
+                    </label>
+                </div>
+                <div class="form-label form-label-inputs">
+                    <label class="input-icon-password">
+                        <input type="password" placeholder="Придумайте пароль" name="modal-password" class="form-input" required="required">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-label">
+                    <div class="currency">
+                        <div class="title">Валюта торгового счета:</div>
+                        <div class="buttons">
+
+                            <label class="radio-custom">
+                                <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                <input name="modal-form-currency" type="radio" value="USD" checked="checked"/>
+                                <span class="radio-button"></span>
+                                <span class="radio-label">Доллар</span>
+                            </label>
+                            <label class="radio-custom">
+                                <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                <input name="modal-form-currency" type="radio" value="EUR"/>
+                                <span class="radio-button"></span>
+                                <span class="radio-label">Евро</span>
+                            </label>
+                            <label class="radio-custom">
+                                <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                <input name="modal-form-currency" type="radio" value="RUB"/>
+                                <span class="radio-button"></span>
+                                <span class="radio-label">Рубль</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-label">
+                    <div class="rules">
+                        <div>
+                            <input id="modal-form-rules" type="checkbox" name="modal-form-rules"/>
+                            <label for="modal-form-rules" class="check-older">
+                                <span class="check-button"></span>
+                                <span class="check-label">Мне есть 18 лет и я согласен с <a href="#">правилами сервиса</a></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-label-hidden">
+                <input type="hidden" name="input_type">
+            </div>
+            <div class="form-label-submit">
+                <input type="submit" class="sbm-dis form-submit button-action" value="Бесплатный демо-счет на 10 000">
+            </div>
+        </form>
+        <div class="socials-signin">
+            <div class="title">Вход через социальные сети:</div>
+            <div class="links">
+                <a class="vk" href="#"></a>
+                <a class="ok" href="#"></a>
+                <a class="fb" href="#"></a>
+                <a class="mm" href="#"></a>
+                <a class="gp" href="#"></a>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <header class="m_header">
+        <div class="wrapper">
+            <h1 class="logo"><a href="#"></a></h1>
+            <div class="middle">
+                <div class="how-to">
+                    <div class="helper">
+                        <a href="#"><span>Как торговать</span></a>
+                    </div>
+                </div>
+                <div class="gov-1">
+                    <div class="helper">Регулируется ЦРОФР<br>Сертификат № ЦРФ RU 0395 AA Vv0088</div>
+                </div>
+                <div class="gov-2">
+                    <div class="helper">Регулируется FinaCom PLC</div>
+                </div>
+                <div class="lang">
+                    <div class="helper">
+                        <div class="ru"><a href="#">Русский</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="signup">
+                <a class="popup-modal" href="#modal">Открыть счет</a>
+            </div>
+        </div>
+    </header>
+    <div class="m_main">
+        <div class="background">
+            <div class="wrapper">
+                <div class="left">
+                    <h2>ОТКРОЙТЕ СЧЕТ ПРЯМО СЕЙЧАС <span>СТАНЬТЕ УСПЕШНЫМ ТРЕЙДЕРОМ</span></h2>
+                    <div class="pluses">
+                        <div class="fast">Мгновенная<br>регистрация</div>
+                        <div class="click">Сделки<br>в один клик</div>
+                        <div class="minute">60 секунд<br>до прибыли</div>
+                        <div class="cash">Прибыль<br>до 90%</div>
+                    </div>
+                    <form action="form.php" method='post' class="m_lead-form form">
+                        <div class="row">
+                            <div class="form-label form-label-inputs">
+                                <label class="input-icon-email">
+                                    <input type="email" placeholder="Введите e-mail" name="email" class="form-input" required="required">
+                                </label>
+                            </div>
+                            <div class="form-label form-label-inputs">
+                                <label class="input-icon-password">
+                                    <input type="password" placeholder="Придумайте пароль" name="password" class="form-input" required="required">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-label">
+                                <div class="currency">
+                                    <div class="title">Валюта торгового счета:</div>
+                                    <div class="buttons">
+
+                                        <label class="radio-custom">
+                                            <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                            <input name="form-currency" type="radio" value="USD" checked="checked"/>
+                                            <span class="radio-button"></span>
+                                            <span class="radio-label">Доллар</span>
+                                        </label>
+                                        <label class="radio-custom">
+                                            <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                            <input name="form-currency" type="radio" value="EUR"/>
+                                            <span class="radio-button"></span>
+                                            <span class="radio-label">Евро</span>
+                                        </label>
+                                        <label class="radio-custom">
+                                            <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                            <input name="form-currency" type="radio" value="RUB"/>
+                                            <span class="radio-button"></span>
+                                            <span class="radio-label">Рубль</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-label">
+                                <div class="rules">
+                                    <div>
+                                        <input id="form-rules" type="checkbox" name="form-rules"/>
+                                        <label for="form-rules" class="check-older">
+                                            <span class="check-button"></span>
+                                            <span class="check-label">Мне есть 18 лет и я согласен с <a href="#">правилами сервиса</a></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-label-hidden">
+                            <input type="hidden" name="input_type">
+                        </div>
+                        <div class="form-label-submit">
+                            <input type="submit" class="sbm-dis form-submit button-action" value="Открыть торговый счет">
+                        </div>
+                    </form>
+                </div>
+                <div class="right">
+                    <div class="lead-tabs">
+                      <ul class="tabs-nav">
+                        <li><a href="#tab-1">АКЦИИ</a></li>
+                        <li><a href="#tab-2">ИНДЕКСЫ</a></li>
+                        <li><a href="#tab-3">ВАЛЮТА</a></li>
+                        <li><a href="#tab-4">СЫРЬЕ</a></li>
+                      </ul>
+                      <div class="tabs-content">
+                        <div class="tabs-item" id="tab-1">
+                            <div class="column">
+                                <div class="item apple">Apple</div>
+                                <div class="item boeing">Boeing</div>
+                                <div class="item facebook">Facebook</div>
+                                <div class="item google">Google</div>
+                                <div class="item microsoft">Microsoft</div>
+                            </div>
+                            <div class="column">
+                                <div class="item ibm">IBM</div>
+                                <div class="item tesla">Tesla</div>
+                                <div class="item coca-cola">Coca-Cola</div>
+                                <div class="item mcdonalds">McDonalds</div>
+                                <div class="item visa">Visa</div>
+                            </div>
+                        </div>
+                        <div class="tabs-item" id="tab-2">
+                            <div class="column">
+                                <div class="item dax">DAX</div>
+                                <div class="item sp500">S&P 500</div>
+                                <div class="item nasdaq">NASDAQ</div>
+                                <div class="item dowjones">DOW JONES</div>
+                            </div>
+                        </div>
+                        <div class="tabs-item" id="tab-3">
+                            <div class="column">
+                                <div class="item">EUR <span>/</span> USD</div>
+                                <div class="item">USD <span>/</span> JPY</div>
+                                <div class="item">GBP <span>/</span> USD</div>
+                                <div class="item">USD <span>/</span> CHF</div>
+                                <div class="item">USD <span>/</span> RUB</div>
+                            </div>
+                            <div class="column">
+                                <div class="item">AUD <span>/</span> USD</div>
+                                <div class="item">EUR <span>/</span> RUB</div>
+                                <div class="item">USD <span>/</span> CAD</div>
+                                <div class="item">EUR <span>/</span> JPY</div>
+                                <div class="item">EUR <span>/</span> CHF</div>
+                            </div>
+                        </div>
+                        <div class="tabs-item" id="tab-4">
+                            <div class="column">
+                                <div class="item oil">Нефть</div>
+                                <div class="item gold">Золото</div>
+                                <div class="item silver">Серебро</div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profit">
+                        <p>Получайте прибыль, торгуя на 33+ активах: валюта, акции, индексы, сырье.</p>
+                        <p>Минимальная сумма депозита 350 рублей/10$/10евро</p>
+                    </div>
+                    <div class="available">
+                        <div class="title">Доступно на всех<br>платформах 24/7:</div>
+                        <div class="google"><a href="#"></a></div>
+                        <div class="app"><a href="#"></a></div>
+                        <div class="online"><a href="#"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="move-down"></a>
+    </div>
+
+    <div class="m_marquee">
+        <div class="wrapper">
+            <div class="title">Котировки предоставлены THOMSON REUTERS</div>
+            <div class="anyClass mWrap marq">
+                <div class="mMove">
+                    <div class="mItem">
+                        <div class="item"><span class="val-title">EUR/USD</span>  <span class="currency">22.3</span></div>
+                        <div class="item"><span class="val-title">GBP/USD</span>  <span class="currency">12.45</span></div>
+                        <div class="item"><span class="val-title">USD/JPY</span>   <span class="currency">25.39</span></div>
+                        <div class="item"><span class="val-title">GOLD</span>  <span class="currency">120.2</span></div>
+                        <div class="item"><span class="val-title">GOLD</span>  <span class="currency">120.2</span></div>
+                        <div class="item"><span class="val-title">BRENT</span>  <span class="currency">53.1</span></div>
+                        <div class="item"><span class="val-title">BRENT</span>  <span class="currency">53.1</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m_demo">
+        <div class="mobile-headling"><h3>Как торговать на <span>OLYMP TRADE</span></h3></div>
+        <div class="right">
+            <video id="my-video" class="video-js"
+                preload="none"
+                width="1000"
+                height="717"
+                poster="images/bg-2.jpg">
+                    <source src="videos/howto.mp4" type='video/mp4'>
+                    <source src="videos/howto.webm" type='video/webm'>
+              </video>
+        </div>
+        <div class="left">
+            <div class="helper-parent">
+                <div class="helper-child">
+                    <h3>Как торговать на <span>OLYMP TRADE</span></h3>
+                    <div class="button">
+                        <a href="#modal" class="popup-modal button-action small">Попробовать на демо-счете</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m_strategy">
+        <div class="wrapper">
+            <div class="hook mobile">
+                <div class="titles">
+                    <h2><div class="index">НАБОР ПРИБЫЛЬНЫХ ТОРГОВЫХ СТРАТЕГИЙ<span class="white">ДЛЯ УСПЕШНОГО СТАРТА</span></div></h2>
+                </div>
+            </div>
+            <div class="video-carousel">
+                <div class="carousel">
+                    <div class="slide-item">
+                        <div class="frame">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NEFGkSmI71s" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="frame-label">
+                            <div class="number">1</div>
+                            <h3>Японский Мартин</h3>
+                            <p>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц</p>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="frame">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/e2lTMDxwis4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="frame-label">
+                            <div class="number">2</div>
+                            <h3>Торговля по сигналам</h3>
+                            <p>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц</p>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="frame">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NdPO7PFYM_Q" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="frame-label">
+                            <div class="number">3</div>
+                            <h3>Бинарный гамбит</h3>
+                            <p>Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <div class="slide-item"><img src="images/video-thumb-1.png" alt=""><div class="title">Японский Мартин</div></div>
+                    <div class="slide-item"><img src="images/video-thumb-2.png" alt=""><div class="title">Торговля по сигналам</div></div>
+                    <div class="slide-item"><img src="images/video-thumb-3.png" alt=""><div class="title">Бинарный гамбит</div></div>
+                </div>
+            </div>
+            <div class="hook">
+                <div class="titles">
+                    <h2><div class="index">НАБОР ПРИБЫЛЬНЫХ ТОРГОВЫХ СТРАТЕГИЙ<span class="white">ДЛЯ УСПЕШНОГО СТАРТА</span></div></h2>
+                    <h3><div class="index">Откройте <span class="yellow">бесплатный учебный счет на 10 00 демо-единиц</span><br>и проверьте любую стратегию на практике<span class="bold">без денежных затрат</span></div></h3>
+                </div>
+                <form action="form.php" method='post' class="m_lead-form form">
+                    <div class="row">
+                        <div class="form-label form-label-inputs">
+                            <label class="input-icon-email">
+                                <input type="email" placeholder="Введите e-mail" name="email" class="form-input" required="required">
+                            </label>
+                        </div>
+                        <div class="form-label form-label-inputs">
+                            <label class="input-icon-password">
+                                <input type="password" placeholder="Придумайте пароль" name="password" class="form-input" required="required">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-label">
+                            <div class="currency">
+                                <div class="title">Валюта торгового счета:</div>
+                                <div class="buttons">
+
+                                    <label class="radio-custom">
+                                        <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                        <input name="form-currency-second" type="radio" value="USD" checked="checked"/>
+                                        <span class="radio-button"></span>
+                                        <span class="radio-label">Доллар</span>
+                                    </label>
+                                    <label class="radio-custom">
+                                        <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                        <input name="form-currency-second" type="radio" value="EUR"/>
+                                        <span class="radio-button"></span>
+                                        <span class="radio-label">Евро</span>
+                                    </label>
+                                    <label class="radio-custom">
+                                        <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                        <input name="form-currency-second" type="radio" value="RUB"/>
+                                        <span class="radio-button"></span>
+                                        <span class="radio-label">Рубль</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-label">
+                            <div class="rules">
+                                <div>
+                                    <input id="form-rules-second" type="checkbox" name="form-rules-second"/>
+                                    <label for="form-rules-second" class="check-older">
+                                        <span class="check-button"></span>
+                                        <span class="check-label">Мне есть 18 лет и я согласен с <a href="#">правилами сервиса</a></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-label-hidden">
+                        <input type="hidden" name="input_type">
+                    </div>
+                    <div class="form-label-submit">
+                        <input type="submit" class="sbm-dis form-submit button-action" value="Открыть учебный счет">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="m_ilt">
+        <div class="m_indicators">
+            <div class="wrapper">
+                <h2>ВСТРОЕННЫЕ ИНДИКАТОРЫ ТЕХНИЧЕСКОГО АНАЛИЗА<br>С ИНСТРУКЦИЕЙ ПО ПРИМЕНЕНИЮ</h2>
+                <ul class="buttons-list">
+                    <li><span class="title">SMA</span><a class="see" href="#">Смотреть</a></li>
+                    <li><span class="title">MACD</span><a class="see" href="#">Смотреть</a></li>
+                    <li><span class="title">RSI</span><a class="see" href="#">Смотреть</a></li>
+                    <li><span class="title">PARABOLIC</span><a class="see" href="#">Смотреть</a></li>
+                    <li><span class="title">STOCHASTIC</span><a class="see" href="#">Смотреть</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="m_lead-table">
+            <div class="wrapper">
+                <table>
+                    <tr>
+                        <td>ВСЕ УСЛОВИЯ ДЛЯ УСПЕШНОГО СТАРТА И<br>КОМФОРТНОГО ТРЕЙДИНГА ТОЛЬКО НА <span class="green">OLYMP TRADE</span></td>
+                        <td>OlympTrade</td>
+                        <td>IQOption</td>
+                        <td>Binex</td>
+                        <td>Binomo</td>
+                    </tr>
+                    <tr>
+                        <td>Демо счет</td>
+                        <td>10 000$</td>
+                        <td>1 000$</td>
+                        <td>требуется депозит</td>
+                        <td>20 сделок по 0,09$</td>
+                    </tr>
+                    <tr>
+                        <td>Прибыль от сделки</td>
+                        <td>до 90%</td>
+                        <td>до 85%</td>
+                        <td>до 89%</td>
+                        <td>до 82%</td>
+                    </tr>
+                    <tr>
+                        <td>Встроенные индикаторы</td>
+                        <td>Да</td>
+                        <td><span class="green">Да</span></td>
+                        <td>требуется депозит</td>
+                        <td><span class="green">Да</span></td>
+                    </tr>
+                    <tr>
+                        <td>Минимальный депозит</td>
+                        <td>10$</td>
+                        <td><span class="green">Да</span></td>
+                        <td>200$</td>
+                        <td>15$</td>
+                    </tr>
+                    <tr>
+                        <td>Бесплатные торговые стратегии</td>
+                        <td>Да</td>
+                        <td><span class="green">Да</span></td>
+                        <td>требуется депозит</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr>
+                        <td>Бесплатные вебинары</td>
+                        <td>Да</td>
+                        <td>нет</td>
+                        <td>требуется депозит</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr>
+                        <td>Минимальная сумма сделки</td>
+                        <td>1$</td>
+                        <td>1$</td>
+                        <td>2$</td>
+                        <td>3$</td>
+                    </tr>
+                    <tr>
+                        <td>Интерактивное обучение</td>
+                        <td>Да</td>
+                        <td><span class="green">Да</span></td>
+                        <td>нет</td>
+                        <td><span class="green">Да</span></td>
+                    </tr>
+                    <tr>
+                        <td>Онлайн-академия трейдинга</td>
+                        <td>Да</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr>
+                        <td>Возможность выставить своё время сделки</td>
+                        <td>Да</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr>
+                        <td>Сделка в 1 клик</td>
+                        <td>Да</td>
+                        <td><span class="green">Да</span></td>
+                        <td>нет</td>
+                        <td><span class="green">Да</span></td>
+                    </tr>
+                    <tr>
+                        <td>Безрисковые сделки</td>
+                        <td>Да</td>
+                        <td>нет</td>
+                        <td><span class="green">Да</span></td>
+                        <td><span class="green">Да</span></td>
+                    </tr>
+                    <tr>
+                        <td>Комиссия за ввод-вывод средств</td>
+                        <td>0%</td>
+                        <td><span class="green">0%</span></td>
+                        <td>до 4%</td>
+                        <td><span class="green">0%</span></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="m_ilt-button">
+            <a href="#modal" class="popup-modal button-action small">Открыть торговый счет</a>
+        </div>
+    </div>
+
+    <div class="m_academy">
+        <div class="wrapper">
+            <h2>ЕДИНСТВЕННАЯ В РОСИИ <span>АКАДЕМИЯ БИНАРНЫХ ОПЦИОНОВ</span></h2>
+            <div class="logo"></div>
+            <div class="lead">Увлекательное обучение трейдингу с реальными<br>денежными бонусами на торговый счет</div>
+            <div class="columns">
+                <div class="col">
+                    <div class="icon icon-1"></div>
+                    <p>Ежедневные <span class="green">обучающие вебинары</span> ведут практикующие трейдеры-аналитики</p>
+                </div>
+                <div class="col">
+                    <div class="icon icon-2"></div>
+                    <p><span class="green">Интерактивный курс обучения,</span> пройдя который, вы получаете базовые знания и сертификат</p>
+                </div>
+                <div class="col">
+                    <div class="icon icon-3"></div>
+                    <p><span class="green">Готовые стратегии</span> для разного уровня подготовки, которые сразу можно применять на практике</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m_feed-mobile">
+        <div class="feedback">
+            <div class="wrapper">
+                <div class="title">
+                    <div class="helper-parent">
+                        <div class="helper-child">СЛУЖБА ПОДДЕРЖКИ КЛИЕНТОВ<br>С ВАМИ 24 ЧАСА В СУТКИ<br>7 ДНЕЙ В НЕДЕЛЮ</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="tel">
+                        <div class="helper-parent">
+                            <div class="helper-child"><div class="icon"></div>По телефону<br>8 (800) 555-45-62</div>
+                        </div>
+                    </div>
+                    <div class="online">
+                        <div class="helper-parent">
+                            <div class="helper-child"><div class="icon"></div>В Онлайне</div>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <div class="helper-parent">
+                            <div class="helper-child"><div class="icon"></div>По e-mail</div>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <div class="helper-parent">
+                            <div class="helper-child"><div class="icon"></div>
+                                В соц сетях
+                                <div class="buttons">
+                                    <a href="#" class="vk"></a>
+                                    <a href="#" class="fb"></a>
+                                    <a href="#" class="yt"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="apps">
+            <div class="wrapper">
+                <h3>Установите приложение на телефон или планшет</h3>
+                <p>и заключайте сделки где угодно и когда захотите. Теперь весь рынок у Вас в кармане</p>
+                <div class="store">
+                    <a href="#" class="apple"></a>
+                    <a href="#" class="google"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m_regulation">
+        <div class="wrapper">
+            <h2>РЕГУЛИРОВАНИЕ ДЕЯТЕЛЬНОСТИ КОМПАНИИ</h2>
+            <p><b>Olymp Trade</b> – надежный брокер, который обладает лицензией российского регулятора ЦРОФР, а также является членом международной Финансовой Комиссии. Это является подтверждением высокого качества наших услуг, и гарантирует каждому трейдеру страхование депозита, всестороннюю поддержку и оперативное решение всех возникающих вопросов.</p>
+            <p class="herb-1">Центр регулирования отношений на финансовых рынках тщательно отслеживает деятельность Olymp Trade уже в течение двух лет и ежегодно выдает нашей компании Сертификат качества – лицензию, которая подтверждает безупречный уровень сервиса, прозрачность работы и отзывчивость в отношении любых запросов наших клиентов.<br><br>Регулируется ЦРОФР <a href="#">№ ЦРФ RU 0395 AA Vv0088</a></p>
+            <div class="profit">
+                <h3>Преимущества для вас</h3>
+                <div class="columns">
+                    <div class="col">
+                        <h4>Независимость</h4>
+                        <p>Вы можете быть<br>уверены в объективности<br>оценки работы Olymp Trade.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Защита прав</h4>
+                        <p>ЦРОФР всегда выступает на стороне<br>трейдера и помогает решать любые<br>спорные ситуации.</p>
+                    </div>
+                    <div class="col">
+                        <h4>Компенсация</h4>
+                        <p>Регулятор гарантирует каждому<br>трейдеру возврат депозита,<br>в случае незаконных действий брокера.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="herb-2">22 февраля 2016 года компания Olymp Trade вступила в международную Финансовую Комиссию. Членство в Финансовой Комиссии – это почетный статус, которым наделяются только надежные и честные компании, не раз доказавшие высокое качество предоставляемых услуг.</p>
+            <div class="download"><a href="#">Финансовая комиссия.pdf</a></div>
+            <div class="profit">
+                <h3>Преимущества для вас</h3>
+                <div class="columns">
+                    <ul>
+                        <li><b>Возмещение депозита</b>  из средств компенсационного фонда, в случае недобросовестных действий брокера.</li>
+                        <li><b>Юридическая</b> поддержка во время урегулирования вашего вопроса.</li>
+                        <li><b>Свободный доступ</b> к бесплатным обучающим материалам по трейдингу, а также к информации по каждой из компаний-участников Финансовой Комиссии.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="warning">
+                <h3>Общее предупреждение о риске</h3>
+                <p>Торговлю бинарными опционами является высокорискованной и может привести к потере всех ваших инвестииций. Таким образом, бинарные опционы могут не подходить для всех инвесторов. Вы не должны инвестировать деньги, которые не можете позволить себе потерять. </p>
+            </div>
+            <div class="hook">
+                <form action="form.php" method='post' class="m_lead-form form">
+                    <div class="left">
+                        <div class="row">
+                            <div class="form-label form-label-inputs">
+                                <label class="input-icon-email">
+                                    <input type="email" placeholder="Введите e-mail" name="email" class="form-input" required="required">
+                                </label>
+                            </div>
+                            <div class="form-label form-label-inputs">
+                                <label class="input-icon-password">
+                                    <input type="password" placeholder="Придумайте пароль" name="password" class="form-input" required="required">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-label">
+                                <div class="currency">
+                                    <div class="title">Валюта торгового счета:</div>
+                                    <div class="buttons">
+
+                                        <label class="radio-custom">
+                                            <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                            <input name="form-currency-third" type="radio" value="USD" checked="checked"/>
+                                            <span class="radio-button"></span>
+                                            <span class="radio-label">Доллар</span>
+                                        </label>
+                                        <label class="radio-custom">
+                                            <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                            <input name="form-currency-third" type="radio" value="EUR"/>
+                                            <span class="radio-button"></span>
+                                            <span class="radio-label">Евро</span>
+                                        </label>
+                                        <label class="radio-custom">
+                                            <span class="tooltip">Вы можете выбрать любую удобную валюту счета. При пополнении торгового счета валютой отличной от валюты счета, средства конвертируются по курсу вашего банка. Валюта счета выбирается при регистрации, впоследствии изменить валюту счета нельзя</span>
+                                            <input name="form-currency-third" type="radio" value="RUB"/>
+                                            <span class="radio-button"></span>
+                                            <span class="radio-label">Рубль</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="row">
+                            <div class="form-label">
+                                <div class="rules">
+                                    <div>
+                                        <input id="form-rules-third" type="checkbox" name="form-rules-third"/>
+                                        <label for="form-rules-third" class="check-older">
+                                            <span class="check-button"></span>
+                                            <span class="check-label">Мне есть 18 лет и я согласен с <a href="#">правилами сервиса</a></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-label-hidden">
+                            <input type="hidden" name="input_type">
+                        </div>
+                        <div class="form-label-submit">
+                            <input type="submit" class="sbm-dis form-submit button-action" value="Открыть торговый счет">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="m_footer">
+        <div class="wrapper">
+            <h2>ПОЛУЧИТЕ ЗАРАБОТАННЫЕ СРЕДСТВА УДОБНЫМ ОБРАЗОМ</h2>
+            <div class="row">
+                <div class="pay-variant visa"></div>
+                <div class="pay-variant mastercard"></div>
+                <div class="pay-variant neteller"></div>
+            </div>
+            <div class="row">
+                <div class="pay-variant faspay"></div>
+                <div class="pay-variant skrill"></div>
+                <div class="pay-variant webmoney"></div>
+                <div class="pay-variant yandex"></div>
+                <div class="pay-variant qiwi"></div>
+            </div>
+            <div class="row fix-width">
+                <div class="item eu">Депозиты хранятся<br>в европейском банке </div>
+                <div class="item lock">Соединение защищено SSL<br>certified 256 bit Secure Proccessing</div>
+                <div class="item copy">Котировки предоставлены<br>Thomson Reuters</div>
+            </div>
+            <div class="row">
+                <div class="logo"></div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

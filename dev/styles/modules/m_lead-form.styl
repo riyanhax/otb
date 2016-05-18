@@ -1,0 +1,211 @@
+.m_lead-form
+  .form-label-inputs
+    float left
+    width 50%
+    padding-right 15px
+    margin-bottom 20px
+    @media screen and (max-width: 480px)
+      width 100%
+      padding-right 0
+      padding-left 0 !important
+    & + .form-label-inputs
+      padding-right 0
+      padding-left 15px
+    input
+      regular()
+      border 1px solid #b3bfbf
+      border-radius 5px
+      height 45px
+      line-height 45px
+      text-align left
+      padding-left 40px
+      padding-right 20px
+      font-size 15px
+      &:focus
+        border-color $yellow
+    .input-icon-email,
+    .input-icon-password,
+    .input-icon-name,
+    .input-icon-tel
+      position relative
+      display block
+    .input-icon-name
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat 0 -120px;
+        width: 17px;
+        height: 16px;
+        position absolute
+        left 12px
+        top 50%
+        margin-top -(@height/2)
+      &.focused:after
+        background-position -100px -120px
+    .input-icon-password
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -35px -120px;
+        width: 15px;
+        height: 20px;
+        position absolute
+        left 12px
+        top 50%
+        margin-top -(@height/2)
+      &.focused:after
+        background-position -70px -120px
+    .input-icon-email
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -191px -120px;
+        width: 20px;
+        height: 14px;
+        position absolute
+        left 12px
+        top 50%
+        margin-top -(@height/2)
+      &.focused:after
+        background-position -219px -120px
+    .input-icon-tel
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -131px -120px;
+        width: 22px;
+        height: 22px;
+        position absolute
+        left 12px
+        top 50%
+        margin-top -(@height/2)
+      &.focused:after
+        background-position -161px -120px
+  .form-label-submit
+    @media screen and (max-width: 1220px)
+      height 70px
+      line-height 68px
+  .currency
+    border 2px solid $yellow
+    border-radius 5px
+    height 63px
+    margin-bottom 10px
+    clearfix()
+    @media screen and (max-width: 630px)
+      height auto
+    &:after
+      content ''
+      background: url('../images/sprite.png') no-repeat -190px -60px;
+      width: 31px;
+      height: 31px;
+      position absolute
+      left 15px
+      top 50%
+      margin-top -(@height/2)
+      @media screen and (max-width: 630px)
+        top 17px
+        margin-top 0
+    .tooltip
+      position absolute
+      left 45px
+      width 300px
+      bottom 70px
+      background $yellow
+      background rgba(245, 208, 107, .88)
+      color #000
+      z-index 20
+      font-size 13px
+      line-height 1.2
+      padding 10px
+      border-radius 5px
+      cursor default
+      visibility hidden
+      opacity 0
+      transform scale(0.9) translateY(40px)
+      @media screen and (max-width: 850px)
+        left auto
+        right 0
+      @media screen and (max-width: 630px)
+        display none
+      &:after
+        content ''
+        triangle(down, 6px, rgba(245, 208, 107, .88))
+        position absolute
+        left 40px
+        bottom -12px
+        width 12px
+        height 12px
+        @media screen and (max-width: 850px)
+          left auto
+          right 40px
+    .title
+      position relative
+      font-size 15px
+      padding-left 65px
+      float left
+      line-height 63px
+      padding-right 35px
+      @media screen and (max-width: 1380px)
+        padding-right 15px
+        padding-left 55px
+      @media screen and (max-width: 630px)
+        display block
+        width 100%
+      &:after
+        content ''
+        position absolute
+        right 0
+        top 50%
+        height 40px
+        width 1px
+        background #ebe361
+        margin-top -20px
+        @media screen and (max-width: 630px)
+          display none
+    .radio-custom
+      position relative
+      padding-left 30px
+      @media screen and (max-width: 1600px)
+        padding-left 15px
+        width auto
+      @media screen and (max-width: 1380px)
+        padding-left 10px
+        .radio-label
+          padding-right 10px
+      @media screen and (max-width: 630px)
+        width 30%
+      @media screen and (max-width: 460px)
+        width auto
+        .radio-label
+          padding-right 0
+          padding-left 0
+      &:after
+        content ''
+        position absolute
+        right 0
+        top 50%
+        height 40px
+        width 1px
+        background #ebe361
+        margin-top -20px
+        @media screen and (max-width: 630px)
+          display none
+      &:last-child:after
+        display none
+      &:hover
+        .tooltip
+          transition all .35s ease-out
+          transform translateY(0) scale(1)
+          opacity 1
+          visibility visible
+  .rules
+    text-align right
+    margin-bottom 35px
+    @media screen and (max-width: 580px)
+      text-align center
+      margin-top 15px
+      margin-bottom 20px
+    .check-label
+      light()
+      font-size 15px
+      a
+        color #fff
+        text-decoration underline
+        &:hover
+          text-decoration none

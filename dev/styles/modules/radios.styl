@@ -1,0 +1,26 @@
+.radio-custom
+  -webkit-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  -o-user-select none
+  user-select none
+  cursor pointer
+  width 160px
+  display inline-block
+  vertical-align middle
+  line-height 59px
+  & > input[type=radio]
+    display none
+  & > .radio-button
+    display inline-block
+    vertical-align middle
+    background: url('../images/sprite.png') no-repeat -54px -183px;
+    width: 31px;
+    height: 30px;
+  & > .radio-label
+    font-size 15px
+    padding-left 10px
+    padding-right 20px
+  & > input[type=radio]:checked
+    & + .radio-button
+      background-position -12px -183px

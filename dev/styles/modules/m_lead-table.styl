@@ -1,0 +1,66 @@
+.m_lead-table
+  position relative
+  background url("../images/bg-4.jpg") no-repeat 50% 50%
+  background-size cover
+  z-index 10
+  @media screen and (max-width: 740px)
+    display none
+  &:before
+    content ''
+    height 87px
+    width 100%
+    position absolute
+    left 0
+    top 0
+    background #121b28
+    z-index 1
+  table
+    position relative
+    z-index 10
+    width 100%
+    color #ff5353
+    table-layout fixed
+    cursor default
+    td
+      padding 10px 0
+      text-align center
+      &:first-child
+        padding-left 40px
+    tr:first-child
+      height 87px
+      color #fff
+      td
+        padding-left 0
+    tr:first-child + tr
+      td
+        padding-top 40px
+        @media screen and (max-width: 900px)
+          padding-top 10px
+    tr:last-child td
+      padding-bottom 40px
+    td:first-child
+      min-width 450px
+      width 450px
+      color #fff
+      text-align left
+      @media screen and (max-width: 900px)
+        min-width 350px
+        width 350px
+    td:first-child + td
+      background rgba(10, 122, 43, .85)
+      color #fff
+    .green
+      color #15c654
+
+.m_ilt-button
+  margin 65px auto
+  width 740px
+  height 84px
+  @media screen and (max-width: 850px)
+    width 100%
+  @media screen and (max-width: 740px)
+    margin-top 0
+    padding-left 2%
+    padding-right 2%
+  a
+    line-height 80px

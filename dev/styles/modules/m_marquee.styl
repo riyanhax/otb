@@ -1,0 +1,51 @@
+.m_marquee
+  height 56px
+  line-height 56px
+  background #000
+  background rgba(0,0,0,.88)
+  color #fff
+  padding-left 430px
+  @media screen and (max-width: 768px)
+    padding-left 0
+  .title
+    padding-left 60px
+    position relative
+    width 430px
+    float left
+    z-index 10
+    left -430px
+    @media screen and (max-width: 768px)
+      left 0
+      display none
+    &:after
+      content ''
+      background: url('../images/sprite.png') no-repeat -402px 0;
+      width: 46px;
+      height: 43px;
+      position absolute
+      left 0
+      top 50%
+      margin-top -(@height/2)
+  .marq
+    position absolute
+    opacity 0
+    left 0
+    top 0
+    width 100%
+    .item
+      display inline-block
+      vertical-align middle
+      margin-right 80px
+      font-size 21px
+      line-height 56px
+      light()
+      .currency
+        color $yellow
+  .wrapper
+    position relative
+    height 100%
+  .str_wrap
+    background none
+    height 100% !important
+    .str_move, .mMove
+      height 100% !important

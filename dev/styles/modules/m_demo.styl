@@ -1,0 +1,128 @@
+.m_demo
+  clearfix()
+  overflow hidden
+  .left, .right
+    position relative
+    float right
+    height 717px
+    @media screen and (max-width: 1220px)
+      height auto
+  .left
+    width 30%
+    position relative
+    padding-left 2%
+    @media screen and (max-width: 1220px)
+      width 100%
+      float none
+      padding-left 0
+      .helper-parent
+        width 100%
+    &:after
+      content ''
+      height 100%
+      width 58px
+      background url("../images/video-arrow.png") no-repeat 0 0
+      position absolute
+      right -58px
+      top 0
+    .helper-parent
+      display table
+      height 100%
+      .helper-child
+        display table-cell
+        vertical-align middle
+    h3
+      font-size 56px
+      light()
+      @media screen and (max-width: 1580px)
+        font-size 48px
+      @media screen and (max-width: 1220px)
+        display none
+      span
+        intro()
+        display block
+    .button
+      height 70px
+      margin-top 40px
+      @media screen and (max-width: 1220px)
+        margin-bottom 20px
+        margin-top 20px
+        width 100%
+        margin-left auto
+        margin-right auto
+        text-align center
+        a
+          width 525px
+          display inline-block !important
+          vertical-align middle
+      @media screen and (max-width: 580px)
+        padding-left 2%
+        padding-right 2%
+      a
+        line-height 66px
+        @media screen and (max-width: 580px)
+          width 100% !important
+  .right
+    width 70%
+    @media screen and (max-width: 1220px)
+      float none
+      width 100%
+      height 445px
+    .mejs-offscreen
+      display none
+    #my-video
+      width 100% !important
+      height 100% !important
+    .mejs-container
+      width 100% !important
+      @media screen and (max-width: 1220px)
+        height 100% !important
+      .mejs-controls
+        display none !important
+        &.visible
+          display block !important
+      .mejs-poster
+        width 100% !important
+        height 100% !important
+        background-size cover
+      .mejs-overlay-play
+        width 100% !important
+        @media screen and (max-width: 1220px)
+          height 100% !important
+        .mejs-overlay-button
+          width 130px
+          height 130px
+          border 5px solid $yellow
+          background rgba(0,0,0,.6)
+          border-radius 50%
+          anim()
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -1px -663px;
+            width: 63px;
+            height: 74px;
+            position absolute
+            left 50%
+            top 50%
+            margin-top -(@height/2)
+            margin-left -22.5px
+          &:hover
+            background #1a2028
+  .mobile-headling
+    display none
+    @media screen and (max-width: 1220px)
+      display block
+      text-align center
+      h3
+        font-size 48px
+        padding 15px 0
+        light()
+        @media screen and (max-width: 768px)
+          font-size 38px
+        @media screen and (max-width: 460px)
+          font-size 32px
+        span
+          intro()
+          @media screen and (max-width: 580px)
+            width 100%
+            display block
